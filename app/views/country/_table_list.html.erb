@@ -1,0 +1,16 @@
+<% @countries.each do |country| %>
+  <% country.regions.each do |region| %>
+    <%region.records.each do |record| %>
+      <% cache record do %>
+        <tr>
+          <td><%= link_to record.region.name , country_path(record.id) %></td>
+          <td><strong><%= record.region.name %></strong></td>
+          <td><%= record.confirmed %></td>
+          <td><%= record.death %></td>
+          <td><%= record.recovered %></td>
+          <td><%= record.active %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

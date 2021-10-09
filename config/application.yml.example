@@ -1,0 +1,4 @@
+development:
+  DATABASE_URL: ""
+production:
+  DATABASE_URL: ""

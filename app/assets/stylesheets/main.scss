@@ -1,0 +1,25 @@
+.table-container-tr {
+  a {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+}
+ .paginationBox {
+  a span.page-numbers {
+    margin-right: 0.25rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #666;
+    font-size: 13px;
+  }
+
+  span.page-numbers:hover,
+  span.page-numbers.current {
+    color: #fff;
+    background-color: #377dff;
+    border-color: transparent;
+  }
+}
