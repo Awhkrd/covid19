@@ -1,0 +1,183 @@
+# Logfile created on 2021-08-21 02:15:13 -0500 by logger.rb/v1.4.3
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 02:15:13 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a6c25442] Running /usr/bin/env mkdir -p /tmp as deploy@127.0.0.1
+ DEBUG [a6c25442] Command: /usr/bin/env mkdir -p /tmp
+  INFO [284f177b] Running /usr/bin/env #<StringIO:0x00007f99bd1c2470> /tmp/git-ssh-758dbb3eab17812360a0.sh as deploy@127.0.0.1
+ DEBUG [284f177b] Command: /usr/bin/env #<StringIO:0x00007f99bd1c2470> /tmp/git-ssh-758dbb3eab17812360a0.sh
+  INFO [04ee1146] Running /usr/bin/env chmod 700 /tmp/git-ssh-758dbb3eab17812360a0.sh as deploy@127.0.0.1
+ DEBUG [04ee1146] Command: /usr/bin/env chmod 700 /tmp/git-ssh-758dbb3eab17812360a0.sh
+  INFO [78210290] Running /usr/bin/env git ls-remote git@github.com:brtr/coin_elite.git HEAD as deploy@127.0.0.1
+ DEBUG [78210290] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-758dbb3eab17812360a0.sh" ; /usr/bin/env git ls-remote git@github.com:brtr/coin_elite.git HEAD )
+  INFO [9075ecf6] Running /usr/bin/env mkdir -p /home/deploy/coin_elite/shared /home/deploy/coin_elite/releases as deploy@127.0.0.1
+ DEBUG [9075ecf6] Command: /usr/bin/env mkdir -p /home/deploy/coin_elite/shared /home/deploy/coin_elite/releases
+  INFO [7b575153] Running /usr/bin/env mkdir -p /home/deploy/coin_elite/shared/config as deploy@127.0.0.1
+ DEBUG [7b575153] Command: /usr/bin/env mkdir -p /home/deploy/coin_elite/shared/config
+ DEBUG [eb4c25ce] Running [ -f /home/deploy/coin_elite/shared/config/master.key ] as deploy@127.0.0.1
+ DEBUG [eb4c25ce] Command: [ -f /home/deploy/coin_elite/shared/config/master.key ]
+ DEBUG [1bb68e8b] Running [ -f /home/deploy/coin_elite/shared/config/database.yml ] as deploy@127.0.0.1
+ DEBUG [1bb68e8b] Command: [ -f /home/deploy/coin_elite/shared/config/database.yml ]
+ DEBUG [7abe02de] Running [ -f /home/deploy/coin_elite/current/REVISION ] as deploy@127.0.0.1
+ DEBUG [7abe02de] Command: [ -f /home/deploy/coin_elite/current/REVISION ]
+ DEBUG [07e1cf69] Running /usr/bin/env cat /home/deploy/coin_elite/current/REVISION 2>/dev/null as deploy@127.0.0.1
+ DEBUG [07e1cf69] Command: /usr/bin/env cat /home/deploy/coin_elite/current/REVISION 2>/dev/null
+ DEBUG [f2add05b] Running [ -f /home/deploy/coin_elite/repo/HEAD ] as deploy@127.0.0.1
+ DEBUG [f2add05b] Command: [ -f /home/deploy/coin_elite/repo/HEAD ]
+  INFO The repository mirror is at /home/deploy/coin_elite/repo
+ DEBUG [87e61db0] Running if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [87e61db0] Command: if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi
+  INFO [f8c64562] Running /usr/bin/env git remote set-url origin git@github.com:brtr/coin_elite.git as deploy@127.0.0.1
+ DEBUG [f8c64562] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-758dbb3eab17812360a0.sh" ; /usr/bin/env git remote set-url origin git@github.com:brtr/coin_elite.git )
+  INFO [46b6b971] Running /usr/bin/env git remote update --prune as deploy@127.0.0.1
+ DEBUG [46b6b971] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-758dbb3eab17812360a0.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [509c6302] Running if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [509c6302] Command: if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi
+  INFO [d908bcf6] Running /usr/bin/env mkdir -p /home/deploy/coin_elite/releases/20210821071513 as deploy@127.0.0.1
+ DEBUG [d908bcf6] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-758dbb3eab17812360a0.sh" ; /usr/bin/env mkdir -p /home/deploy/coin_elite/releases/20210821071513 )
+  INFO [ea4d3fd2] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/coin_elite/releases/20210821071513 as deploy@127.0.0.1
+ DEBUG [ea4d3fd2] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-758dbb3eab17812360a0.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/coin_elite/releases/20210821071513 )
+ DEBUG [4b32c9a2] Running if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [4b32c9a2] Command: if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi
+ DEBUG [b5a26de8] Running /usr/bin/env git rev-list --max-count=1 master as deploy@127.0.0.1
+ DEBUG [b5a26de8] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-758dbb3eab17812360a0.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [49e1c41f] Running if test ! -d /home/deploy/coin_elite/releases/20210821071513; then echo "Directory does not exist '/home/deploy/coin_elite/releases/20210821071513'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [49e1c41f] Command: if test ! -d /home/deploy/coin_elite/releases/20210821071513; then echo "Directory does not exist '/home/deploy/coin_elite/releases/20210821071513'" 1>&2; false; fi
+  INFO [9e284ee9] Running /usr/bin/env echo "" > REVISION as deploy@127.0.0.1
+ DEBUG [9e284ee9] Command: cd /home/deploy/coin_elite/releases/20210821071513 && /usr/bin/env echo "" > REVISION
+  INFO [f89b1f34] Running /usr/bin/env mkdir -p /home/deploy/coin_elite/releases/20210821071513/config as deploy@127.0.0.1
+ DEBUG [f89b1f34] Command: /usr/bin/env mkdir -p /home/deploy/coin_elite/releases/20210821071513/config
+ DEBUG [37654a44] Running [ -L /home/deploy/coin_elite/releases/20210821071513/config/master.key ] as deploy@127.0.0.1
+ DEBUG [37654a44] Command: [ -L /home/deploy/coin_elite/releases/20210821071513/config/master.key ]
+ DEBUG [6310942f] Running [ -L /home/deploy/coin_elite/releases/20210821071513/config/database.yml ] as deploy@127.0.0.1
+ DEBUG [6310942f] Command: [ -L /home/deploy/coin_elite/releases/20210821071513/config/database.yml ]
+  INFO [0f42c9ae] Running /usr/bin/env ln -s /home/deploy/coin_elite/releases/20210821071513 /home/deploy/coin_elite/releases/current as deploy@127.0.0.1
+ DEBUG [0f42c9ae] Command: /usr/bin/env ln -s /home/deploy/coin_elite/releases/20210821071513 /home/deploy/coin_elite/releases/current
+  INFO [96b9a36a] Running /usr/bin/env mv /home/deploy/coin_elite/releases/current /home/deploy/coin_elite as deploy@127.0.0.1
+ DEBUG [96b9a36a] Command: /usr/bin/env mv /home/deploy/coin_elite/releases/current /home/deploy/coin_elite
+ DEBUG [bfb9c5b0] Running /usr/bin/env ls -x /home/deploy/coin_elite/releases as deploy@127.0.0.1
+ DEBUG [bfb9c5b0] Command: /usr/bin/env ls -x /home/deploy/coin_elite/releases
+ DEBUG [3954e1f5] Running if test ! -d /home/deploy/coin_elite/releases; then echo "Directory does not exist '/home/deploy/coin_elite/releases'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [3954e1f5] Command: if test ! -d /home/deploy/coin_elite/releases; then echo "Directory does not exist '/home/deploy/coin_elite/releases'" 1>&2; false; fi
+  INFO [af6d7b72] Running /usr/bin/env echo "Branch master (at ) deployed as release 20210821071513 by ava" >> /home/deploy/coin_elite/revisions.log as deploy@127.0.0.1
+ DEBUG [af6d7b72] Command: cd /home/deploy/coin_elite/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20210821071513 by ava" >> /home/deploy/coin_elite/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 02:18:08 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0f92aa0b] Running /usr/bin/env mkdir -p /tmp as deploy@127.0.0.1
+ DEBUG [0f92aa0b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e0a5d300] Running /usr/bin/env #<StringIO:0x00007fccde3309e8> /tmp/git-ssh-6d7829bb8e73a90008bb.sh as deploy@127.0.0.1
+ DEBUG [e0a5d300] Command: /usr/bin/env #<StringIO:0x00007fccde3309e8> /tmp/git-ssh-6d7829bb8e73a90008bb.sh
+  INFO [84c5eb3d] Running /usr/bin/env chmod 700 /tmp/git-ssh-6d7829bb8e73a90008bb.sh as deploy@127.0.0.1
+ DEBUG [84c5eb3d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-6d7829bb8e73a90008bb.sh
+  INFO [91c62b6b] Running /usr/bin/env git ls-remote git@github.com:brtr/coin_elite.git HEAD as deploy@127.0.0.1
+ DEBUG [91c62b6b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6d7829bb8e73a90008bb.sh" ; /usr/bin/env git ls-remote git@github.com:brtr/coin_elite.git HEAD )
+  INFO [0e646d9f] Running /usr/bin/env mkdir -p /home/deploy/coin_elite/shared /home/deploy/coin_elite/releases as deploy@127.0.0.1
+ DEBUG [0e646d9f] Command: /usr/bin/env mkdir -p /home/deploy/coin_elite/shared /home/deploy/coin_elite/releases
+  INFO [3de2501e] Running /usr/bin/env mkdir -p /home/deploy/coin_elite/shared/config as deploy@127.0.0.1
+ DEBUG [3de2501e] Command: /usr/bin/env mkdir -p /home/deploy/coin_elite/shared/config
+ DEBUG [e2772349] Running [ -f /home/deploy/coin_elite/shared/config/master.key ] as deploy@127.0.0.1
+ DEBUG [e2772349] Command: [ -f /home/deploy/coin_elite/shared/config/master.key ]
+ DEBUG [f71c4b8b] Running [ -f /home/deploy/coin_elite/shared/config/database.yml ] as deploy@127.0.0.1
+ DEBUG [f71c4b8b] Command: [ -f /home/deploy/coin_elite/shared/config/database.yml ]
+ DEBUG [c7ebd992] Running [ -f /home/deploy/coin_elite/current/REVISION ] as deploy@127.0.0.1
+ DEBUG [c7ebd992] Command: [ -f /home/deploy/coin_elite/current/REVISION ]
+ DEBUG [a2a8dc75] Running /usr/bin/env cat /home/deploy/coin_elite/current/REVISION 2>/dev/null as deploy@127.0.0.1
+ DEBUG [a2a8dc75] Command: /usr/bin/env cat /home/deploy/coin_elite/current/REVISION 2>/dev/null
+ DEBUG [8bf4d762] Running [ -f /home/deploy/coin_elite/repo/HEAD ] as deploy@127.0.0.1
+ DEBUG [8bf4d762] Command: [ -f /home/deploy/coin_elite/repo/HEAD ]
+  INFO The repository mirror is at /home/deploy/coin_elite/repo
+ DEBUG [e22e741e] Running if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [e22e741e] Command: if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi
+  INFO [7ef20b1f] Running /usr/bin/env git remote set-url origin git@github.com:brtr/coin_elite.git as deploy@127.0.0.1
+ DEBUG [7ef20b1f] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6d7829bb8e73a90008bb.sh" ; /usr/bin/env git remote set-url origin git@github.com:brtr/coin_elite.git )
+  INFO [891e89f2] Running /usr/bin/env git remote update --prune as deploy@127.0.0.1
+ DEBUG [891e89f2] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6d7829bb8e73a90008bb.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [020eb837] Running if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [020eb837] Command: if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi
+  INFO [0e949e27] Running /usr/bin/env mkdir -p /home/deploy/coin_elite/releases/20210821071808 as deploy@127.0.0.1
+ DEBUG [0e949e27] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6d7829bb8e73a90008bb.sh" ; /usr/bin/env mkdir -p /home/deploy/coin_elite/releases/20210821071808 )
+  INFO [ccedf19b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/coin_elite/releases/20210821071808 as deploy@127.0.0.1
+ DEBUG [ccedf19b] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6d7829bb8e73a90008bb.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/coin_elite/releases/20210821071808 )
+ DEBUG [0463fcd0] Running if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [0463fcd0] Command: if test ! -d /home/deploy/coin_elite/repo; then echo "Directory does not exist '/home/deploy/coin_elite/repo'" 1>&2; false; fi
+ DEBUG [c8711001] Running /usr/bin/env git rev-list --max-count=1 master as deploy@127.0.0.1
+ DEBUG [c8711001] Command: cd /home/deploy/coin_elite/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6d7829bb8e73a90008bb.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9f0a23f5] Running if test ! -d /home/deploy/coin_elite/releases/20210821071808; then echo "Directory does not exist '/home/deploy/coin_elite/releases/20210821071808'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [9f0a23f5] Command: if test ! -d /home/deploy/coin_elite/releases/20210821071808; then echo "Directory does not exist '/home/deploy/coin_elite/releases/20210821071808'" 1>&2; false; fi
+  INFO [0f27d39e] Running /usr/bin/env echo "" > REVISION as deploy@127.0.0.1
+ DEBUG [0f27d39e] Command: cd /home/deploy/coin_elite/releases/20210821071808 && /usr/bin/env echo "" > REVISION
+  INFO [086516dd] Running /usr/bin/env mkdir -p /home/deploy/coin_elite/releases/20210821071808/config as deploy@127.0.0.1
+ DEBUG [086516dd] Command: /usr/bin/env mkdir -p /home/deploy/coin_elite/releases/20210821071808/config
+ DEBUG [80b5dde3] Running [ -L /home/deploy/coin_elite/releases/20210821071808/config/master.key ] as deploy@127.0.0.1
+ DEBUG [80b5dde3] Command: [ -L /home/deploy/coin_elite/releases/20210821071808/config/master.key ]
+ DEBUG [f8d94006] Running [ -L /home/deploy/coin_elite/releases/20210821071808/config/database.yml ] as deploy@127.0.0.1
+ DEBUG [f8d94006] Command: [ -L /home/deploy/coin_elite/releases/20210821071808/config/database.yml ]
+  INFO [bd54ce4c] Running /usr/bin/env ln -s /home/deploy/coin_elite/releases/20210821071808 /home/deploy/coin_elite/releases/current as deploy@127.0.0.1
+ DEBUG [bd54ce4c] Command: /usr/bin/env ln -s /home/deploy/coin_elite/releases/20210821071808 /home/deploy/coin_elite/releases/current
+  INFO [7096fbe8] Running /usr/bin/env mv /home/deploy/coin_elite/releases/current /home/deploy/coin_elite as deploy@127.0.0.1
+ DEBUG [7096fbe8] Command: /usr/bin/env mv /home/deploy/coin_elite/releases/current /home/deploy/coin_elite
+ DEBUG [62d0f03a] Running /usr/bin/env ls -x /home/deploy/coin_elite/releases as deploy@127.0.0.1
+ DEBUG [62d0f03a] Command: /usr/bin/env ls -x /home/deploy/coin_elite/releases
+ DEBUG [98dcee20] Running if test ! -d /home/deploy/coin_elite/releases; then echo "Directory does not exist '/home/deploy/coin_elite/releases'" 1>&2; false; fi as deploy@127.0.0.1
+ DEBUG [98dcee20] Command: if test ! -d /home/deploy/coin_elite/releases; then echo "Directory does not exist '/home/deploy/coin_elite/releases'" 1>&2; false; fi
+  INFO [00e209bf] Running /usr/bin/env echo "Branch master (at ) deployed as release 20210821071808 by ava" >> /home/deploy/coin_elite/revisions.log as deploy@127.0.0.1
+ DEBUG [00e209bf] Command: cd /home/deploy/coin_elite/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20210821071808 by ava" >> /home/deploy/coin_elite/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 02:18:12 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e6b0a18b] Running /usr/bin/env mkdir -p /tmp as deploy@127.0.0.1
+ DEBUG [e6b0a18b] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 02:47:47 -0500 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [04e4f5df] Running /usr/bin/env mkdir -p /tmp as deploy@3.237.88.17
+ DEBUG [04e4f5df] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 02:48:49 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8dd980e4] Running /usr/bin/env mkdir -p /tmp as deploy@3.237.88.17
+ DEBUG [8dd980e4] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 02:49:40 -0500 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [bd24d0a8] Running /usr/bin/env mkdir -p /tmp as deploy@3.237.88.17
+ DEBUG [bd24d0a8] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 02:50:23 -0500 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [1d318913] Running /usr/bin/env mkdir -p /tmp as deploy@3.237.88.17
+ DEBUG [1d318913] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1d318913] Finished in 3.273 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-9ffa06601654d6f6580d.sh 0.0%
+  INFO Uploading /tmp/git-ssh-9ffa06601654d6f6580d.sh 100.0%
+  INFO [ced03c34] Running /usr/bin/env chmod 700 /tmp/git-ssh-9ffa06601654d6f6580d.sh as deploy@3.237.88.17
+ DEBUG [ced03c34] Command: /usr/bin/env chmod 700 /tmp/git-ssh-9ffa06601654d6f6580d.sh
+  INFO [ced03c34] Finished in 0.802 seconds with exit status 0 (successful).
+  INFO [194875ea] Running /usr/bin/env git ls-remote git@github.com:brtr/coin_elite.git HEAD as deploy@3.237.88.17
+ DEBUG [194875ea] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-9ffa06601654d6f6580d.sh" ; /usr/bin/env git ls-remote git@github.com:brtr/coin_elite.git HEAD )
+ DEBUG [194875ea] 	Warning: Permanently added 'github.com,140.82.112.4' (RSA) to the list of known hosts.
+ DEBUG [194875ea] 	git@github.com: Permission denied (publickey).
+ DEBUG [194875ea] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 02:54:24 -0500 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [26ff5e9a] Running /usr/bin/env mkdir -p /tmp as deploy@3.237.88.17
+ DEBUG [26ff5e9a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [26ff5e9a] Finished in 3.413 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-00c2c1fd85a1faec91bd.sh 0.0%
+  INFO Uploading /tmp/git-ssh-00c2c1fd85a1faec91bd.sh 100.0%
+  INFO [90e2aa6c] Running /usr/bin/env chmod 700 /tmp/git-ssh-00c2c1fd85a1faec91bd.sh as deploy@3.237.88.17
+ DEBUG [90e2aa6c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-00c2c1fd85a1faec91bd.sh
+  INFO [90e2aa6c] Finished in 0.775 seconds with exit status 0 (successful).
+  INFO [2f243a33] Running /usr/bin/env git ls-remote git@github.com:brtr/coin_elite.git HEAD as deploy@3.237.88.17
+ DEBUG [2f243a33] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-00c2c1fd85a1faec91bd.sh" ; /usr/bin/env git ls-remote git@github.com:brtr/coin_elite.git HEAD )
+ DEBUG [2f243a33] 	Warning: Permanently added the RSA host key for IP address '140.82.113.4' to the list of known hosts.
+ DEBUG [2f243a33] 	git@github.com: Permission denied (publickey).
+ DEBUG [2f243a33] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.

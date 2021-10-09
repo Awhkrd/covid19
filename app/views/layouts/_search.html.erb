@@ -1,0 +1,6 @@
+<%= form_tag url, id: "search_targets", method: "GET", remote: true do %>
+  <div class="input-group mb-3">
+    <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "搜索关键字..." %>
+    <button type="submit" class="btn btn-primary">搜索</button>
+  </div>
+<% end %>
